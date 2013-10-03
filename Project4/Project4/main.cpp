@@ -22,7 +22,7 @@ int main()
 	argv[0] = input.Return_Str_ptr();
 	cout << "\n";
 	cout << "Raderna skrivs ut här nedanför: " << endl;
-	input.Passning(i, argv);
+	input.Passning(i, *argv);
 	cin.get();
 
 	return 0;
