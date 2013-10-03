@@ -19,7 +19,7 @@ class Instring
 	Instring(string* str);
 	int Instring::GetAntal();
 	string* Instring::Return_Str_ptr();
-	int Instring::Passning(int argc, string *argv[]);
+	int Instring::Passning(int argc, string argv[]);
 	~Instring(void);
 };
  
