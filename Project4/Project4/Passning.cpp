@@ -40,14 +40,19 @@ string* Instring::Return_Str_ptr()
 	return row_ptr;
 }
 
-int Instring::Passning(int argc, string *argv[])
+int Instring::Passning(int argc, string argv[])
 {
-	int x = 0, i = 0;
-	do
+	if (argc > 0)
 	{
-		cout << *argv[i] << endl;
-		x++;
-	} while (x < argc);
+		int x = 0, i = 0;
+		/* 	do
+		{
+			cout << argv[i] << endl;
+			x++;
+		} while (x < argc); */
+		for (int i=0; i < argc; i++)
+			cout << argv[x] << endl;
+	}
 	return 0;
 }
 
