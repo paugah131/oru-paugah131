@@ -12,9 +12,6 @@ int main()
             setlocale(LC_ALL, "swedish");
 
             Instring input;
-			string      stringvalues = "125 320 512 750 333";
-            /* istringstream iss (stringvalues);
-            ostringstream oss; */
             int i = 0, tal = 0;
             string* str;
 
