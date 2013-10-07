@@ -1,6 +1,7 @@
 #include <clocale>
 #include <cstdlib>
 #include <stdio.h>
+#include <sstream>
 #include <string>
 #include "Passning.h"
 
@@ -42,16 +43,22 @@ string* Instring::Return_Str_ptr()
 
 int Instring::Passning(int argc, string argv[])
 {
+	string   stringvalues;  
+
 	if (argc > 0)
 	{
-		int x = 0, i = 0;
-		/* 	do
-		{
-			cout << argv[i] << endl;
-			x++;
-		} while (x < argc); */
-		for (int i=0; i < argc; i++)
-			cout << argv[x] << endl;
+		*this->row_ptr = *argv;                 
+		stringvalues = *this->row_ptr;                 
+		istringstream iss (stringvalues);                 
+		for (int n=0; n < argc; n++)                 
+			{                         
+				int val;                         
+				iss >> val;                         
+				cout << val << endl;                 
+			} 
+				/* iss >> ref;
+				val = *ref;
+				cout << val << '\n'; */
 	}
 	return 0;
 }
