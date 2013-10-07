@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <cstdlib>
 #include <clocale>
@@ -11,18 +12,18 @@ int main()
 	setlocale(LC_ALL, "swedish");
 
 	Instring input;
-	int i = 0;
-	string* argv[1];
+	int i = 0, tal = 0;
+	string* str;
 
-	cout << "Skriv hur många teckenrader som skall skrivas! Avsluta med radslut (retur)" << endl;
-	i = input.GetAntal();
+	cout << "Skriv hur många tal som skall skrivas! Avsluta med radslut (retur)" << endl;
+	tal = input.GetAntal();
 	cin.get();
-	cout << "Raden skall skrivas ut " << i << " gånger" << endl;
-	cout << "\nSedan skriv raden, använd godtyckliga tecken! Avsluta teckensträngen med radslut (retur)" << endl;
-	argv[0] = input.Return_Str_ptr();
+	cout << "Antal tal som skall skrivas ut " << tal << endl;
+	cout << "\nSedan skriv talen, avgränsa med mellanslag! Avsluta strängen med radslut (retur)" << endl;
+	str = input.Return_Str_ptr();
 	cout << "\n";
-	cout << "Raderna skrivs ut här nedanför: " << endl;
-	input.Passning(i, *argv);
+	cout << "Talen skrivs ut här nedanför: " << endl;
+	input.Passning(tal, str);
 	cin.get();
 
 	return 0;
