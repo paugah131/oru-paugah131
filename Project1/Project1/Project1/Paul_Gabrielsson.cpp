@@ -9,6 +9,7 @@ using namespace std;
 
 int paul()
 {
+	setlocale(LC_ALL, "swedish");
 	string name;
 
 	cout << "What is your name?" << '\n' << '\n';
