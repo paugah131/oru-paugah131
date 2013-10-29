@@ -7,9 +7,8 @@ int main()
 {
 	setlocale(LC_ALL, "swedish");
 
-	int ret_value = 0;
 	cout << "Förtestprogram för klassen Car" << "\n\n";
-	ret_value = paul();
+	paul();
 	cin.get();
 	cin.get();
 
